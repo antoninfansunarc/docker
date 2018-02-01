@@ -7,6 +7,8 @@ RUN apk -v --update add \
         mailcap \
         && \
     pip install --upgrade awscli==1.14.5 s3cmd==2.0.1 python-magic && \
+    pip install wget \
+    pip install curl  \
     apk -v --purge del py-pip && \
     rm /var/cache/apk/*
 VOLUME /root/.aws
